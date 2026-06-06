@@ -221,4 +221,12 @@ section#serviços article:hover{
     font-weight: bold;
 }
 
+/* === EMOJIS DO TWEMOJI === */
+
+img.emoji{
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: -0.1em;
+}
+
 

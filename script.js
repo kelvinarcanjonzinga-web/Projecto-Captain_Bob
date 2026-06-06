@@ -164,5 +164,7 @@ document.getElementById('btn-whatsapp').addEventListener('click', function() {
     window.open('https://wa.me/244943567154?text=' + encodeURIComponent(mensagem))
 })
 
+twemoji.parse(document.body)
+
 
 
