@@ -1,0 +1,168 @@
+const botoes = document.querySelectorAll('.filtro-btn')
+const categorias = document.querySelectorAll('#menu article')
+
+for(let btn of botoes){
+    btn.addEventListener('click' , function(){
+        //PASSO 1: ler qual Categoria foi clicada;
+        const categoriaEscolhida = btn.getAttribute('data-categoria')
+
+        //PASSO 2: Esconder todos os «articles»;
+        categorias.forEach(cat => {
+            cat.classList.add('escondido')
+        })
+
+        //PASSO 3: Mostrar o Correcto;
+        if (categoriaEscolhida === 'todos'){
+            categorias.forEach(cat => {
+                cat.classList.remove('escondido')
+            })
+        } else {
+            document.getElementById(categoriaEscolhida).classList.remove('escondido')
+        }
+    })
+}
+
+//Adicionando o resto dos Botões 'Adicionar';
+const todosPratos = document.querySelectorAll('#menu article ul li')
+
+todosPratos.forEach(li => {
+    if(li.querySelector('.nome')){
+        const botao = document.createElement('button')
+        botao.setAttribute('class' , 'btn-adicionar')
+        botao.textContent ='+ Adicionar'
+        li.appendChild(botao)
+    }
+})
+
+const botoes_adicionar = document .querySelectorAll('.btn-adicionar')
+
+document.getElementById('btn-reset').addEventListener('click' , function(){
+    carrinho = []
+    actualizarCarrinho()
+})
+
+//Colecionador de itens;
+
+let carrinho = [];
+
+botoes_adicionar.forEach(botao => {
+    botao.addEventListener('click' , function(){
+        const li = botao.parentElement
+        const nome = li.querySelector('.nome').textContent
+        const preco = parseInt(
+            li.querySelector('.preço').textContent
+            .replace('Kz', '').replace(/\./g, '')
+        )
+
+        //Criar um Objecto com os daddos do prato;
+        const itens = {
+            nome: nome,
+            preco: preco
+        }
+
+        //Adicionar os itens selecionados ao carrinho;
+        carrinho.push(itens)
+        actualizarCarrinho()     
+
+        //Feedback Visual dos Botões;
+        botao.textContent = '✔️Adicionado'
+        botao.classList.add('btn-adicionado')
+        botao.disable = true //Impede clicar duas vezes antes de 2 segundos;
+
+        //Volta ao Estado Original após 2 segundos;
+        setTimeout(function(){
+            botao.textContent = '+ Adicionar'
+            botao.classList.remove('btn-adicionado')
+            botao.disable = false
+        }, 2000)
+    }) 
+})
+
+function actualizarCarrinho(){
+    const lista = document.getElementById('carrinho-lista')
+    const total = document.getElementById('carrinho-total')
+    document.getElementById('carrinho-contador').textContent = carrinho.length
+
+    //Limpa a lista antes de redesenhar;
+    lista.innerHTML = ''
+
+    //Variável Para somar o Total;
+    let totalValor = 0
+
+    //Para cada item no array carrinho;
+    carrinho.forEach((item , index) => {
+        //Cria itens com o nome e preço;
+        const li = document.createElement('li')
+        li.classList.add('carrinho-item')
+        li.textContent = `${item.nome} - ${item.preco} Kz`
+        lista.appendChild(li)
+
+        //Botão Eliminar Item;
+        const btnEliminar = document.createElement('button')
+        btnEliminar.textContent = '❌'
+        btnEliminar.addEventListener('click' , function(){
+            carrinho.splice(index , 1)
+            actualizarCarrinho()
+        })
+
+        li.appendChild(btnEliminar)
+        lista.appendChild(li)
+
+        //Soma o Total;
+        totalValor += item.preco
+    })
+
+    //Actualiza o texto do total;
+    total.textContent = totalValor + 'Kz'
+
+    //Mostrar Botão de carrinho apenas se houver Item;
+    const btnCarrinho = document.getElementById('btn-carrinho')
+    if(carrinho.length > 0){
+        btnCarrinho.classList.add('visivel')
+
+    } else {
+        btnCarrinho.classList.remove('visivel')
+    }
+
+    const painel = document.getElementById('carrinho-painel')
+    if(carrinho.length === 0){
+        painel.classList.add('escondido')
+
+    } else {
+
+    }
+}
+
+//Adicionando Toggle do Painel;
+document.getElementById('btn-carrinho').addEventListener('click' , function(){
+    document.getElementById('carrinho-painel').classList.toggle('escondido')
+})
+
+
+
+
+//Botão WhatsApp!
+
+document.getElementById('btn-whatsapp').addEventListener('click', function() {
+    
+    let mensagem = '🍽️ *Pedido - Captain Bob*\n\n'
+    
+    carrinho.forEach(item => {
+        mensagem += `• ${item.nome} — ${item.preco} Kz\n`
+    })
+    
+    // Calcula o total — como fizeste na função actualizarCarrinho
+    let total = 0
+    carrinho.forEach(item => {
+        total += item.preco
+    })
+    
+    mensagem += `\n*Total: ${total} Kz*`
+    
+    
+    // Abre o WhatsApp — preenche o ???
+    window.open('https://wa.me/244943567154?text=' + encodeURIComponent(mensagem))
+})
+
+
+

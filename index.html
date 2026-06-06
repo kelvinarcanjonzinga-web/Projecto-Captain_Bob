@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Captain_BOB</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="menu_principal">
@@ -21,6 +22,7 @@
 
     <main>
         <section id="hero">
+            <img src="imagens/480843050_976896687335093_7566339617791319588_n.jpg" alt="Logo Captain Bob" class="hero-logo">
             <h1>Captain BOB</h1>
             <p>Restaurante Libanês em Angola, com uma Gastronomia de dar água na boca!</p>
            <a href="#menu" class="btn">Ver Menu</a>
@@ -1119,5 +1121,22 @@
     <footer>
         <p>© 2026 Restaurante Captain Bob. Todos os direitos reservados.</p>  
     </footer>
+
+    <div id="carrinho-flutuante">
+        <button id="btn-carrinho">
+            🛒 <span id="carrinho-contador">0</span> itens
+        </button>
+
+        <div id="carrinho-painel" class="escondido">
+            <h3>O Meu Pedido</h3>
+            <ul id="carrinho-lista"></ul>
+            <p>Total:<strong id="carrinho-total">0 Kz</strong></p>
+            <button id="btn-reset">🗑️ Limpar tudo</button>
+            <button id="btn-whatsapp">Enviar via Whatsapp</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-primaria: #CC0000;
+    --cor-secundaria: #0099CC;
+    --cor-hero: #1a3a5c;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+    --cor-branco: #ffffff;
+
+    --altura-header: 93px;
+}
+
+/* === HEADER === */
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 25px;
+    background-color: var(--cor-primaria);
+    top: 0;
+    z-index: 1000;
+}
+
+header  nav  ul{
+    display: flex;
+    list-style-type: none;
+}
+
+header  nav  ul  li{
+    margin: 12px;
+}
+
+header  nav  ul  li  a{
+    text-decoration: none;
+    color: var(--cor-branco);
+}
+
+/* === MAIN === */
+
+main{
+    background-color: var(--cor-fundo);
+    padding-top: var(--altura-header);
+}
+
+/* === SECTION#hero === */
+
+section#hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-hero);
+    min-height: calc(100vh - var(--altura-header));
+}
+
+.hero-logo{
+    width: 60%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+}
+
+#hero h1{
+    margin-top: -10px;
+    color: var(--cor-branco);
+    font-size: 4em;
+    margin-bottom: 8px;
+
+}
+
+#hero p{
+    color: rgba(255, 255, 255, 0.664);
+    margin-bottom: 12px;
+}
+
+.btn{
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria);
+    text-decoration: none;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.btn:hover{
+    transform: translateY(5px);
+    transition: all 0.3s ease;
+}
+
+/* === SECTION#serviços === */
+
+section#serviços{
+    display:grid;
+    grid-template-columns: repeat(4 , 1fr);
+    background-color: var(--cor-fundo);
+    gap: 5px;
+}
+
+#serviços h2{
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+}
+
+#serviços article{
+    border: 2px solid var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+#serviços article h3{
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+#serviços article p{
+    text-align: left;
+    line-height: 1.3;
+    padding: 3px;
+}
+
+article#esplanada{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+article#takeaway{
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+article#entregas{
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+article#dine_in{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+section#serviços article:hover{
+    transform: translateY(-6px);
+    box-shadow: 0px 8px 20px black;
+    transition: all 0.6s ease;
+}
+
+/* === PEDIDO === */
+
+#carrinho-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999; /* só o z-index abaixo do header */
+}
+
+#carrinho-painel{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 20px black;
+    width: 280px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#carrinho-lista {
+    list-style-type: square;
+    padding:10px;
+    max-height: 200px;
+    overflow-y: auto;  /* só a lista faz scroll, não o total/botões */
+}
+
+/* === Class CSS ... JavaScript */
+
+.escondido{
+    display: none;
+}
+
+#btn-carrinho{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 50%;  
+    border: 2px solid var(--cor-hero);
+}
+
+#btn-carrinho.visivel{
+    display: block;
+}
+
+.carrinho-item{
+
+}
+
+.btn-adicionado{
+    background-color: green;
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+
