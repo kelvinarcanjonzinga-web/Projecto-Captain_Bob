@@ -3,6 +3,10 @@ const categorias = document.querySelectorAll('#menu article')
 
 for(let btn of botoes){
     btn.addEventListener('click' , function(){
+
+        botoes.forEach(b => b.classList.remove('activo'))
+        btn.classList.add('activo')
+
         //PASSO 1: ler qual Categoria foi clicada;
         const categoriaEscolhida = btn.getAttribute('data-categoria')
 
