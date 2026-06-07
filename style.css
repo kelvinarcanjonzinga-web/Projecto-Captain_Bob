@@ -84,11 +84,17 @@ section#hero{
     color: var(--cor-branco);
     font-size: 4em;
     margin-bottom: 8px;
+    transition-duration: 0.3s;
+}
 
+#hero h1:hover{
+    font-size: 4.6em;
+    transition-duration: 0.3s;
 }
 
 #hero p{
     color: rgba(255, 255, 255, 0.664);
+    font-weight: bold;
     margin-bottom: 12px;
 }
 
@@ -209,7 +215,616 @@ section#serviços article:hover{
     font-size: 0.90em;
 }
 
+/* === SECTIN#MENU  ===*/
 
+section#menu h2{
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+/* === IMPLEMENTAÇÃO DAS IMAGENS ===*/
+
+
+#matabichos{
+    position: relative;
+    background-image: url('imagens/matabicho.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#matabichos::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.75);
+}
+
+#matabichos > * {
+    position: relative;
+    z-index: 1;
+}
+
+#matabichos h3{
+    color: var(--cor-branco);
+}
+
+#matabichos ul li .nome{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#matabichos ul li .preço{
+     color: #FFD700;
+     font-weight: bold;
+}
+
+#entradas{
+    position: relative;
+    background-image: url('imagens/pratos\ de\ entrada.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#entradas::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.75);
+     color: var(--cor-branco);
+}
+
+#entradas > *{
+    position: relative;
+    z-index: 1;
+}
+
+#entradas h3{
+    color: var(--cor-branco);
+}
+
+#entradas ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#entradas ul li .preço {
+    color: #FFA500; 
+    font-weight: bold;
+}
+
+#entradas ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+#sandwich{
+    position: relative;
+    background-image: url('imagens/sandwich.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#sandwich::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.75);
+     color: var(--cor-branco);
+}
+
+#sandwich > *{
+    position: relative;
+    z-index: 1;
+}
+
+#sandwich h3{
+    color: var(--cor-branco);
+}
+
+#sandwich ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#sandwich ul li .preço {
+    color: #FFD700; 
+    font-weight: bold;
+}
+
+#sandwich ul li p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#sandwich ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+#burgers{
+    position: relative;
+    background-image: url('imagens/burger\'s2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#burgers::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+#burgers > * {
+    position: relative;
+    z-index: 1;
+}
+
+#burgers h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#burgers ul li .nome{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#burgers ul li .preço {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+#menu article#burgers ul li p{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#burgers ul li {
+   border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+
+#saladas{
+    position: relative;
+    background-image: url('imagens/saladas.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#saladas::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+#saladas > * {
+    position: relative;
+    z-index: 1;
+}
+
+#saladas h3{
+    color: var(--cor-branco);
+}
+
+#saladas ul li .nome{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#saladas ul li .preço {
+    color: #90EE90;
+    font-weight: bold;
+}
+
+#menu article#saladas ul li p{
+    color:#FFD700;
+    font-weight: normal;
+}
+
+#saladas ul li {
+    border-bottom: 1px dashed gray;
+}
+
+#pizzas{
+    position: relative;
+    background-image: url('imagens/pizza1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--cor-branco);
+    background-attachment: fixed;
+}
+
+#pizzas::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+#pizzas > * {
+    position: relative;
+    z-index: 1;
+}
+
+#pizzas ul li p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#spaguetti{
+    position: relative;
+    background-image: url('imagens/spaguetti.jpg');
+    background-position: center ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#spaguetti::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+#spaguetti> * {
+    position: relative;
+    z-index: 1;
+}
+
+#spaguetti h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#spaguetti ul li .nome{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#spaguetti ul li .preço {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+#menu article#spaguetti ul li p{
+    color:rgb(54, 130, 202);
+    font-weight: bold;
+}
+
+#spaguetti ul li {
+   border-bottom: 1px dashed rgba(255,255,255,0.2)
+}
+
+#pratos_libanesa{
+    position: relative;
+    background-image: url('imagens/ptatos_libanesa.png');
+    background-position: center ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#pratos_libanesa::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 0;
+}
+
+#pratos_libanesa > * {
+    position: relative;
+    z-index: 1;
+}
+
+#pratos_libanesa h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#pratos_libanesa ul li .nome{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#pratos_libanesa ul li .preço {
+    color: #90EE90;
+    font-weight: bold;
+}
+
+#pratos_libanesa ul li {
+   border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+#pratos_angolanos{
+    position: relative;
+    background-image:url('imagens/pratos_angolanos.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+#pratos_angolanos::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+#pratos_angolanos > * {
+    position: relative;
+    z-index: 1;
+}
+
+#pratos_angolanos h3{
+    color: var(--cor-branco);
+}
+
+#pratos_angolanos ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#pratos_angolanos ul li .preço {
+    color: #FFA500; 
+}
+
+#menu article#pratos_angolanos ul li p {
+    color: rgba(16, 223, 223, 0.75) !important;
+    font-weight: bold;
+}
+
+#crispy{
+    position: relative;
+    background-image:url('imagens/broasted\ &\ crispy.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+#crispy::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+#crispy > * {
+    position: relative;
+    z-index: 1;
+}
+
+#crispy h3{
+    color: var(--cor-branco);
+}
+
+#crispy ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#crispy ul li .preço {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+#menu article#crispy ul li p {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: bold;
+}
+
+#crispy ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+
+#pratos{
+    position: relative;
+    background-image:url('imagens/pratos.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#pratos::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+#pratos > * {
+    position: relative;
+    z-index: 1;
+}
+
+#pratos h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#pratos ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#pratos ul li .preço {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+#menu article#pratos ul li p {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: bold;
+}
+
+#pratos ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+    font-weight: bold;
+}
+
+#gelados{
+    position: relative;
+    background-image:url('imagens/gelados.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#gelados::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+#gelados  > * {
+    position: relative;
+    z-index: 1;
+}
+
+#gelados  h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#gelados ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#gelados ul li .preço {
+    color: #FF69B4;
+    font-weight: bold; 
+}
+
+#gelados ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+
+#sumos_naturais{
+    position: relative;
+    background-image: url('imagens/sumos_naturais2.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    color: var(--cor-branco);
+}
+
+#sumos_naturais::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+#sumos_naturais > * {
+    position: relative;
+    z-index: 1;
+}
+
+#sumos_naturais ul li nome {
+    color: var(--cor-branco);
+}
+
+#sumos_naturais ul li .preço{
+    color: #ffd700;;
+}
+
+#sumos_naturais ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+#refrigerantes{
+    position: relative;
+    background-image:url('imagens/refrigerante1.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+}
+
+#refrigerantes::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 0;
+}
+
+#refrigerantes > * {
+    position: relative;
+    z-index: 1;
+}
+
+#refrigerantes h3{
+    color: var(--cor-branco);
+}
+
+#refrigerantes ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#refrigerantes ul li .preço {
+    color: #FFD700; 
+}
 
 /* === ARTICLES — exclui pizzas === */
 #menu article:not(#pizzas) ul li {
@@ -219,6 +834,93 @@ section#serviços article:hover{
     padding: 8px 5px;
     border-bottom: 1px dashed var(--cor-secundaria);
     gap: 5px 10px;
+}
+
+#bebidas_quentes{
+    position: relative;
+    background-image:url('imagens/bebidas\ quentes.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#bebidas_quentes::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+#bebidas_quentes > * {
+    position: relative;
+    z-index: 1;
+}
+
+#bebidas_quentes h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#bebidas_quentes ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#bebidas_quentes ul li .preço {
+    color: #F5DEB3;
+    font-weight: bold; 
+}
+
+#bebidas_quentes ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+#batidos{
+    position: relative;
+    background-image:url('imagens/batidos.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#batidos::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+}
+
+#batidos> * {
+    position: relative;
+    z-index: 1;
+}
+
+#batidos h3{
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#batidos ul li .nome {
+    color: var(--cor-branco);
+    font-weight: bold;
+}
+
+#batidos ul li .preço {
+    color:  #FFB6C1;
+    font-weight: bold; 
+}
+
+#batidos ul li {
+    border-bottom: 1px dashed rgba(255,255,255,0.2);
+    font-weight: bold;  
 }
 
 #menu article h3{
@@ -237,7 +939,7 @@ section#serviços article:hover{
 
 }
 
-#menu article ul li .preço{
+#menu article:not(#pizzas):not(#sumos_naturais):not(#refrigerantes):not(#saladas):not(#matabichos):not(#entradas):not(#sandwich):not(#burgers):not(#spaguetti):not(#pratos_libanesa):not(#pratos_angolanos):not(#crispy):not(#pratos):not(#gelados):not(#bebidas_quentes):not(#batidos) ul li .preço{
     grid-column: 2;
     grid-row: 1;
     text-align: right;
@@ -296,7 +998,7 @@ section#serviços article:hover{
     grid-column: 2;
     grid-row: 1;
     text-align: right;
-    color: var(--cor-primaria);
+    color: #FFD700;
     font-size: 0.9em;
     font-weight: bold;
 }
@@ -305,7 +1007,7 @@ section#serviços article:hover{
     grid-column: 3;
     grid-row: 1;
     text-align: right;
-    color: var(--cor-primaria);
+    color: #FF6B6B;
     font-size: 0.9em;
     font-weight: bold;
 }
