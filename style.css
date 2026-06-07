@@ -209,6 +209,129 @@ section#serviços article:hover{
     font-size: 0.90em;
 }
 
+
+
+/* === ARTICLES — exclui pizzas === */
+#menu article:not(#pizzas) ul li {
+    display: grid;
+    grid-template-columns: 1fr 100px 110px;
+    align-items: center;
+    padding: 8px 5px;
+    border-bottom: 1px dashed var(--cor-secundaria);
+    gap: 5px 10px;
+}
+
+#menu article h3{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-primaria);
+    border-top: 1px solid var(--cor-primaria);
+    margin-top: 15px;
+    border-radius: 15px;
+    font-size: 1.8em;
+}
+
+#menu article ul li .nome{
+    grid-column: 1;
+    grid-row: 1;
+
+}
+
+#menu article ul li .preço{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+#menu article:not(#pizzas) ul li .btn-adicionar,
+#menu article:not(#pizzas) ul li .btn-adicionado {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#menu article ul li p{
+    grid-column: 1 /-1;
+    grid-row: 2;
+    font-size: 0.85em;
+    color: gray;
+    font-weight: bold;
+    font-style:unset;
+    margin-top: -3px;
+}
+
+/* === PIZZAS ===*/
+
+
+#pizzas ul li {
+    display: grid;
+    grid-template-columns: 1fr 90px 90px 110px;
+    align-items: center;
+    padding: 8px 5px;
+    border-bottom: 1px dashed var(--cor-secundaria);
+    gap: 5px 10px;
+}
+
+#pizzas .cabecalho_pizzas {
+    display: grid;
+    grid-template-columns: 1fr 90px 90px 110px;
+    padding: 5px;
+}
+
+#pizzas .cabecalho_pizzas span:first-child {
+    grid-column: 2;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#pizzas .cabecalho_pizzas span:last-child {
+    grid-column: 3;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#pizzas .preco-media {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    color: var(--cor-primaria);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#pizzas .preco-familiar {
+    grid-column: 3;
+    grid-row: 1;
+    text-align: right;
+    color: var(--cor-primaria);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#pizzas ul li .btn-adicionar,
+#pizzas ul li .btn-adicionado {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+#pizzas ul li p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-size: 0.85em;
+    color: gray;
+}
+
+#pizzas ul li .preço {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    text-align: right;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
 /* === PEDIDO === */
 
 #carrinho-flutuante {
@@ -350,6 +473,7 @@ section#serviços article:hover{
 }
 
 .btn-adicionar{
+    width: 80px;
     background-color: var(--cor-hero);
     color: var(--cor-branco);
     font-weight: bold;

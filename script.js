@@ -53,10 +53,21 @@ botoes_adicionar.forEach(botao => {
     botao.addEventListener('click' , function(){
         const li = botao.parentElement
         const nome = li.querySelector('.nome').textContent
+
+        const spanPreco = li.querySelector('.preço') || 
+                          li.querySelector('.preco-media')
+
+        if (!spanPreco) return
+
         const preco = parseInt(
-            li.querySelector('.preço').textContent
+            spanPreco.textContent
             .replace('Kz', '').replace(/\./g, '')
         )
+
+        if (isNaN(preco)) {
+            alert('Este item ainda não tem preço definido!')
+            return
+        }
 
         //Criar um Objecto com os daddos do prato;
         const itens = {
@@ -145,9 +156,6 @@ function actualizarCarrinho(){
 document.getElementById('btn-carrinho').addEventListener('click' , function(){
     document.getElementById('carrinho-painel').classList.toggle('escondido')
 })
-
-
-
 
 //Botão WhatsApp!
 
