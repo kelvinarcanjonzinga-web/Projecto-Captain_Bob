@@ -65,7 +65,7 @@ botoes_adicionar.forEach(botao => {
         actualizarCarrinho()     
 
         //Feedback Visual dos Botões;
-        botao.textContent = '✔️Adicionado'
+        botao.textContent = '✔️'
         botao.classList.add('btn-adicionado')
         botao.disable = true //Impede clicar duas vezes antes de 2 segundos;
 
@@ -99,7 +99,8 @@ function actualizarCarrinho(){
 
         //Botão Eliminar Item;
         const btnEliminar = document.createElement('button')
-        btnEliminar.textContent = '❌'
+        btnEliminar.textContent = '🗙'
+        btnEliminar.classList.add('btn-eliminar')
         btnEliminar.addEventListener('click' , function(){
             carrinho.splice(index , 1)
             actualizarCarrinho()
@@ -131,6 +132,9 @@ function actualizarCarrinho(){
     } else {
 
     }
+
+    //Re-processa os emojis criados dinamicamente;
+    twemoji.parse(document.getElementById('carrinho-painel'))
 }
 
 //Adicionando Toggle do Painel;

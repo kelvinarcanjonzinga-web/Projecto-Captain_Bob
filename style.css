@@ -46,6 +46,14 @@ header  nav  ul  li  a{
     color: var(--cor-branco);
 }
 
+header nav ul li a:hover{
+   
+}
+
+header  nav  ul  li  a:active{
+  
+}
+
 /* === MAIN === */
 
 main{
@@ -174,7 +182,7 @@ section#serviços article:hover{
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background-color: var(--cor-branco);
+    background-image: linear-gradient(to top ,var(--cor-branco), var(--cor-secundaria));
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0px 4px 20px black;
@@ -183,11 +191,77 @@ section#serviços article:hover{
     overflow-y: auto;
 }
 
+#carrinho-painel h3{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+    background-image: linear-gradient(to left, var(--cor-secundaria), var(--cor-hero));
+    color: var(--cor-branco);
+    padding: 4px;
+    width: 150px;
+    border: 1px solid var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px var(--cor-primaria);
+}
+
+#carrinho-painel p{
+    background-color: var(--cor-branco);
+    width: 120px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid var(--cor-hero);
+}
+
+#carrinho-painel strong{
+    margin-left: 5px;
+}
+
 #carrinho-lista {
+    color: var(--cor-hero);
+    font-weight: bold;
     list-style-type: square;
-    padding:10px;
+    margin-bottom: 5px;
+    line-height: 1.7;
     max-height: 200px;
     overflow-y: auto;  /* só a lista faz scroll, não o total/botões */
+}
+
+#btn-reset{
+    margin-top: 5px ;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-whatsapp{
+    display: grid;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid green;
+    box-shadow: 0px 0px 7px green;
+    background-color: var(--cor-hero);
+    color: var(--cor-branco);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn-whatsapp:hover{
+   transform: scale(1.05);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#btn-whatsapp .fa-whatsapp{
+    color: #25D366;
+    font-size: 1.3em;
 }
 
 /* === Class CSS ... JavaScript */
@@ -212,13 +286,44 @@ section#serviços article:hover{
 }
 
 .carrinho-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    border-bottom: 1.7px solid var(--cor-hero);
+}
 
+.carrinho-item button{
+    background: none;
+    border: none;
+    color: var(--cor-primaria);
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 2px 6px;
+    transition: background 0.2s ease;
+}
+
+.carrinho-item button:hover {
+    background-color: rgba(204, 0, 0, 0.1); 
+}
+
+.btn-adicionar{
+    background-color: var(--cor-hero);
+    color: var(--cor-branco);
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-secundaria);
 }
 
 .btn-adicionado{
     background-color: green;
     color: var(--cor-branco);
     font-weight: bold;
+    border-radius: 5px;
+    padding: 1px;
 }
 
 /* === EMOJIS DO TWEMOJI === */
