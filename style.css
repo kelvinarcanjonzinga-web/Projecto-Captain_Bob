@@ -182,6 +182,7 @@ section#serviços article:hover{
     flex-wrap: wrap;
     gap: 8px;
     padding: 15px;
+    margin-bottom: 10px;
     background-color: var(--cor-hero);
 }
 
@@ -220,6 +221,12 @@ section#serviços article:hover{
 section#menu h2{
     padding: 20px;
     font-size: 1.5em;
+}
+
+#menu article{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 /* === IMPLEMENTAÇÃO DAS IMAGENS ===*/
@@ -823,7 +830,8 @@ section#menu h2{
 }
 
 #refrigerantes ul li .preço {
-    color: #FFD700; 
+    color: #FFD700;
+    font-weight: bold; 
 }
 
 /* === ARTICLES — exclui pizzas === */
@@ -1032,6 +1040,108 @@ section#menu h2{
     font-size: 0.9em;
     font-weight: bold;
     color: var(--cor-primaria);
+}
+
+/* === SECTION#CONTACTOS */
+
+#contactos{
+    padding: 40px 20px;
+    background-color: var(--cor-hero);
+    color: var(--cor-branco);
+}
+
+#contactos h2{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+div#horário{
+    width: 260px;
+    border: 1px solid var(--cor-branco);
+    border-radius: 12px;
+    background-color: var(--cor-primaria);
+    box-shadow: 0px 0px 5px var(--cor-secundaria);
+    transition: all 0.3s ease;
+}
+
+div#horário:hover{
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+#horário h3{
+    padding: 10px;
+    margin-bottom: -8px;
+}
+
+#horário p{
+    padding: 10px;
+}
+
+div#telefone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--cor-secundaria);
+    width: 125px;
+    height: 125px;
+    margin-bottom: 10px;
+    background-color: var(--cor-secundaria);
+    transition: all 0.3s ease;
+}
+
+div#telefone:hover{
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+#telefone h3{
+    padding: 8px;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+}
+
+#telefone h3:hover{
+    transform: translateY(-1.5px);
+    transition: all 0.2s ease;
+}
+
+#telefone a{
+    padding:10px;
+    text-decoration: none;
+    color: var(--cor-branco);
+    background-color: var(--cor-primaria);
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid ;
+    box-shadow: 0px 0px 5px var(--cor-secundaria);
+}
+
+#telefone a:hover{
+    text-decoration: underline;
+}
+
+div#localização{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#localização h3{
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+#localização address{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 /* === PEDIDO === */
