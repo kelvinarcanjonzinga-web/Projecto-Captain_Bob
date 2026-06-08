@@ -1045,15 +1045,24 @@ section#menu h2{
 /* === SECTION#CONTACTOS */
 
 #contactos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
     padding: 40px 20px;
     background-color: var(--cor-hero);
     color: var(--cor-branco);
+    border-radius: 10px;
 }
 
 #contactos h2{
+    width: 100%;
     text-align: center;
     font-size: 2em;
     margin-bottom: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 0px 3px black;
 }
 
 div#horário{
@@ -1073,10 +1082,12 @@ div#horário:hover{
 #horário h3{
     padding: 10px;
     margin-bottom: -8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #horário p{
     padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 div#telefone{
@@ -1101,6 +1112,7 @@ div#telefone:hover{
 }
 
 #telefone h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 8px;
     margin-bottom: 15px;
     transition: all 0.2s ease;
@@ -1112,13 +1124,14 @@ div#telefone:hover{
 }
 
 #telefone a{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding:10px;
     text-decoration: none;
     color: var(--cor-branco);
     background-color: var(--cor-primaria);
     font-weight: bold;
     border-radius: 15px;
-    border: 1px solid ;
+    border: 1px solid var(--cor-branco) ;
     box-shadow: 0px 0px 5px var(--cor-secundaria);
 }
 
@@ -1128,14 +1141,28 @@ div#telefone:hover{
 
 div#localização{
     display: flex;
+    flex: 1;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    min-width: 300px;
+    border: 1px solid var(--cor-branco);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px var(--cor-secundaria);
+    margin-top: 15px;
+    background-image: linear-gradient(to left, var(--cor-texto), var(--cor-hero));
+    transition: all 0.3s ease;
+}
+
+div#localização:hover{
+    transform: translateX(1.9px);
+    transition: all 0.3s ease;
 }
 
 #localização h3{
     font-size: 1.6em;
     margin-bottom: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #localização address{
@@ -1144,6 +1171,30 @@ div#localização{
     margin-bottom: 5px;
 }
 
+div#mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--cor-branco);
+    margin: 15px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 3px var(--cor-primaria);
+    transition: all 0.3s ease;
+}
+
+div#mapa:hover{
+    transform: translateY(-1.9px);
+    transition: all 0.3s ease;
+}
+
+
+iframe{
+    width: 250px;
+    margin: 10px;
+    border-radius: 5px;
+}
 /* === PEDIDO === */
 
 #carrinho-flutuante {
