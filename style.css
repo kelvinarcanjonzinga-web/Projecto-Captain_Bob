@@ -70,6 +70,14 @@ section#hero{
     align-items: center;
     background-color: var(--cor-hero);
     min-height: calc(100vh - var(--altura-header));
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+section#hero:hover{
+    transform: translateY(2.2px);
+    transition: all 0.4s ease;
 }
 
 .hero-logo{
@@ -227,6 +235,12 @@ section#menu h2{
     margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#menu article:hover{
+    transform: translateY(-2.2px);
+    transition: all 0.5s ease;
 }
 
 /* === IMPLEMENTAÇÃO DAS IMAGENS ===*/
@@ -1054,6 +1068,12 @@ section#menu h2{
     background-color: var(--cor-hero);
     color: var(--cor-branco);
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#contactos:hover{
+    transform: translateY(-2.2px);
+    transition: all 0.5s ease;
 }
 
 #contactos h2{
@@ -1351,6 +1371,21 @@ iframe{
     font-weight: bold;
     border-radius: 5px;
     padding: 1px;
+}
+
+footer{
+    height: 200px;
+    padding: 40px;
+}
+
+footer p{
+    margin-bottom: 5px;
+}
+
+footer a{
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--cor-primaria);
 }
 
 /* === EMOJIS DO TWEMOJI === */
