@@ -35,31 +35,41 @@ header{
 header  nav  ul{
     display: flex;
     list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+
+header nav ul:hover li a{
+    opacity: 0.4;
+    filter: blur(1px);
+    transition: all 0.3s ease;
 }
 
 header  nav  ul  li{
     margin: 12px;
-    transition: all 0.4s ease;
-    transition-duration: 0.5s;
 }
 
-header nav ul li:hover{
-    transform: translateY(-1.5px);
-    transition: all 0.4s ease;
-    transition-duration: 0.5s;
+header nav ul li:hover a{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(-3px);
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.6);
 }
 
 header  nav  ul  li  a{
+    display: inline-block;
     text-decoration: none;
     color: var(--cor-branco);
     font-family: Arial, Helvetica, sans-serif;
     box-shadow: 0px 0px 3px;
     border-radius: 10px;
-    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 14px;
 }
 
 header nav ul li a:hover{
-   background-color: red;
+   background-color: var(--cor-primaria);
 }
 
 header  nav  ul  li  a:active{
@@ -1369,7 +1379,7 @@ iframe{
 
 #carrinho-painel p{
     background-color: var(--cor-branco);
-    width: 120px;
+    width: 130px;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
@@ -1556,12 +1566,24 @@ footer .redes_sociais a{
     background-clip: text;
     font-size: 2em;
     text-align: center;
+    transition: all 0.4s ease;
+}
+
+.fa-instagram:hover{
+    transform: translateY(-2.3px);
+    transition: all 0.4s ease;
 }
 
 .fa-facebook{
     color: #1877F2;
     font-size: 2em;
     text-align: center;
+    transition: all 0.4s ease;
+}
+
+.fa-facebook:hover{
+    transform: translateY(-2.3px);
+    transition: all 0.4s ease;
 }
 
 .fa-github {

@@ -129,7 +129,7 @@ function actualizarCarrinho(){
     })
 
     //Actualiza o texto do total;
-    total.textContent = totalValor + 'Kz'
+    total.textContent = totalValor + ' Kz'
 
     //Mostrar Botão de carrinho apenas se houver Item;
     const btnCarrinho = document.getElementById('btn-carrinho')
