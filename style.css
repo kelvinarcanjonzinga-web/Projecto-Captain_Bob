@@ -1826,8 +1826,8 @@ img.emoji{
     }
 
     .carrinho-item button{
-        font-size: 1em;
-        padding: 2px 5px 2px 2px;
+        font-size: 0.85em;
+        padding: 2px 5px;
         margin-left: 5px;
         flex-shrink: 0;
     }
