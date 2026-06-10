@@ -23,6 +23,14 @@ for(let btn of botoes){
         } else {
             document.getElementById(categoriaEscolhida).classList.remove('escondido')
         }
+
+        // Scroll suave até ao menu após filtrar;
+        setTimeout(function(){
+            Document.getElementById('menu').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        },100)
     })
 }
 
