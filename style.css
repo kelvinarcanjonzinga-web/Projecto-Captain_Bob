@@ -1686,7 +1686,7 @@ img.emoji{
         #sumos_naturais {
         background-attachment: scroll;  /* ← muda de fixed para scroll */
         background-size: cover;
-
+        }        
     /* === MENU ITENS === */
     #menu article:not(#pizzas) ul li{
         grid-template-columns: 1fr 80px 80px;
@@ -1840,6 +1840,8 @@ img.emoji{
         white-space: nowrap;
     }
 
+}   
+
     /* === MEDIA QUERIES_ TABLET: === */
     @media (min-width: 769px) and (max-width: 1024px){
 
@@ -1856,6 +1858,6 @@ img.emoji{
         }
     }
 
-}
+
 
 
