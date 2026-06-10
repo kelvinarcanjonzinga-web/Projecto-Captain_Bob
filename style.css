@@ -1678,6 +1678,15 @@ img.emoji{
         padding: 4px 8px;
     }
 
+       /* Desativa parallax em TODOS os articles com imagem */
+        #matabichos, #entradas, #saladas, #sandwich,
+        #burgers, #pizzas, #spaguetti, #pratos_libanesa,
+        #pratos_angolanos, #crispy, #pratos, #gelados,
+        #refrigerantes, #bebidas_quentes, #batidos,
+        #sumos_naturais {
+        background-attachment: scroll;  /* ← muda de fixed para scroll */
+        background-size: cover;
+
     /* === MENU ITENS === */
     #menu article:not(#pizzas) ul li{
         grid-template-columns: 1fr 80px 80px;
