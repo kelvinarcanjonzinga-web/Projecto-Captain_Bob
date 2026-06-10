@@ -378,7 +378,6 @@ span.preço{
     background-image: url('imagens/matabicho.webp');
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #matabichos::before{
@@ -416,7 +415,6 @@ span.preço{
     background-image: url('imagens/entradas.webp');
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #entradas::before{
@@ -459,7 +457,6 @@ span.preço{
     background-image: url('imagens/sandwich.webp');
     background-position: center left;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #sandwich::before{
@@ -471,7 +468,7 @@ span.preço{
     height: 100%;
     z-index: 0;
     background-color: rgba(0,0,0,0.75);
-     color: var(--cor-branco);
+    color: var(--cor-branco);
 }
 
 #sandwich > *{
@@ -506,7 +503,6 @@ span.preço{
     background-image: url('imagens/burgers2.webp');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #burgers::before{
@@ -554,7 +550,6 @@ span.preço{
     background-image: url('imagens/saladas.webp');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #saladas::before{
@@ -602,7 +597,6 @@ span.preço{
     background-size: cover;
     background-position: center;
     color: var(--cor-branco);
-    background-attachment: fixed;
 }
 
 #pizzas::before{
@@ -630,7 +624,6 @@ span.preço{
     background-image: url('imagens/spaguetti.webp');
     background-position: center ;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #spaguetti::before{
@@ -678,7 +671,6 @@ span.preço{
     background-image: url('imagens/pratoslibanesa.webp');
     background-position: center ;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 #pratos_libanesa::before{
@@ -721,7 +713,6 @@ span.preço{
     background-image:url('imagens/angolano.webp');
     background-size: cover;
     background-position: center 40%;
-    background-attachment: fixed;
 }
 
 #pratos_angolanos::before{
@@ -764,7 +755,6 @@ span.preço{
     background-image:url('imagens/broastedcrispy.webp');
     background-size: cover;
     background-position: center 30%;
-    background-attachment: fixed;
 }
 
 #crispy::before{
@@ -813,7 +803,6 @@ span.preço{
     background-image:url('imagens/pratos.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 #pratos::before{
@@ -862,7 +851,6 @@ span.preço{
     background-image:url('imagens/gelados.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 #gelados::before{
@@ -906,7 +894,6 @@ span.preço{
     background-image: url('imagens/sumosnaturais.webp');
     background-size: cover;
     background-position: center bottom;
-    background-attachment: fixed;
     color: var(--cor-branco);
 }
 
@@ -944,7 +931,6 @@ span.preço{
     background-image:url('imagens/refrigerante1.webp');
     background-size: cover;
     background-position: center 30%;
-    background-attachment: fixed;
 }
 
 #refrigerantes::before{
@@ -992,7 +978,6 @@ span.preço{
     background-image:url('imagens/bebidasquentes.webp');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 #bebidas_quentes::before{
@@ -1035,7 +1020,6 @@ span.preço{
     background-image:url('imagens/batidos.webp');
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
 }
 
 #batidos::before{
