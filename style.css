@@ -413,7 +413,7 @@ span.preço{
 
 #entradas{
     position: relative;
-    background-image: url('imagens/pratos\ de\ entrada.webp');
+    background-image: url('imagens/entradas.webp');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -457,7 +457,7 @@ span.preço{
 #sandwich{
     position: relative;
     background-image: url('imagens/sandwich.webp');
-    background-position: center;
+    background-position: center left;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -675,7 +675,7 @@ span.preço{
 
 #pratos_libanesa{
     position: relative;
-    background-image: url('imagens/pratos\ libanesa.webp');
+    background-image: url('imagens/pratoslibanesa.webp');
     background-position: center ;
     background-size: cover;
     background-attachment: fixed;
@@ -718,9 +718,9 @@ span.preço{
 
 #pratos_angolanos{
     position: relative;
-    background-image:url('imagens/pratos_angolanos.webp');
+    background-image:url('imagens/angolano.webp');
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 40%;
     background-attachment: fixed;
 }
 
@@ -761,7 +761,7 @@ span.preço{
 
 #crispy{
     position: relative;
-    background-image:url('imagens/broasted\ &\ crispy.webp');
+    background-image:url('imagens/broastedcrispy.webp');
     background-size: cover;
     background-position: center 30%;
     background-attachment: fixed;
@@ -903,7 +903,7 @@ span.preço{
 
 #sumos_naturais{
     position: relative;
-    background-image: url('imagens/sumos_naturais2\ .webp');
+    background-image: url('imagens/sumosnaturais.webp');
     background-size: cover;
     background-position: center bottom;
     background-attachment: fixed;
@@ -989,7 +989,7 @@ span.preço{
 
 #bebidas_quentes{
     position: relative;
-    background-image:url('imagens/bebidas\ quentes.webp');
+    background-image:url('imagens/bebidasquentes.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
