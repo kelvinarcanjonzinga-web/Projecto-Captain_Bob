@@ -379,8 +379,6 @@ span.preço{
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #matabichos::before{
@@ -419,8 +417,6 @@ span.preço{
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #entradas::before{
@@ -464,8 +460,6 @@ span.preço{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #sandwich::before{
@@ -513,8 +507,6 @@ span.preço{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #burgers::before{
@@ -563,8 +555,6 @@ span.preço{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #saladas::before{
@@ -613,8 +603,6 @@ span.preço{
     background-position: center;
     color: var(--cor-branco);
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #pizzas::before{
@@ -643,8 +631,6 @@ span.preço{
     background-position: center ;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #spaguetti::before{
@@ -693,8 +679,6 @@ span.preço{
     background-position: center ;
     background-size: cover;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #pratos_libanesa::before{
@@ -738,8 +722,6 @@ span.preço{
     background-size: cover;
     background-position: center 30%;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #pratos_angolanos::before{
@@ -783,8 +765,6 @@ span.preço{
     background-size: cover;
     background-position: center 30%;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #crispy::before{
@@ -834,8 +814,6 @@ span.preço{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #pratos::before{
@@ -885,8 +863,6 @@ span.preço{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #gelados::before{
@@ -932,8 +908,6 @@ span.preço{
     background-position: center bottom;
     background-attachment: fixed;
     color: var(--cor-branco);
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #sumos_naturais::before {
@@ -971,8 +945,6 @@ span.preço{
     background-size: cover;
     background-position: center 30%;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #refrigerantes::before{
@@ -1021,8 +993,6 @@ span.preço{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #bebidas_quentes::before{
@@ -1066,8 +1036,6 @@ span.preço{
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
 }
 
 #batidos::before{
@@ -1635,6 +1603,226 @@ img.emoji{
     width: 1.5em;
     height: 1.5em;
     vertical-align: -0.1em;
+}
+
+
+/* ============================================
+   MEDIA QUERIES — MOBILE FIRST
+   ============================================ */
+
+@media (max-width: 768px){
+    /* === HEADER === */
+    header{
+        padding: 15px;
+    }
+
+    header nav ul{
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li{
+        margin: 4px;
+    }
+
+    header nav ul li a{
+        font-size: 0.85em;
+        padding: 4px 8px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 15px;
+    }
+
+    /* === HERO === */
+    #hero h1{
+        font-size: 2.2em;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    #hero p{
+        font-size: 0.9em;
+        text-align: center;
+        padding: 0px 15px;
+        word-break: break-word;
+    }
+
+    .hero-logo{
+        width: 80%;
+        max-width: 220px;
+    }
+
+
+    /* === SERVIÇOS === */
+
+    section#serviços{
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 5px;
+        padding: 10px;
+    }
+
+    #serviços h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    /* === FILTROS === */
+    .filtros{
+        justify-content: center;
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .filtro-btn{
+        font-size: 0.75em;
+        padding: 4px 8px;
+    }
+
+    /* === MENU ITENS === */
+    #menu article:not(#pizzas) ul li{
+        grid-template-columns: 1fr 80px 80px;
+        gap: 3px 5px;
+        padding: 6px 3px;
+    }
+
+    #menu article ul li .nome{
+        font-size: 0.85em;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.3;
+    }
+
+    #menu article ul li .preço{
+        font-size: 0.8em;
+    }
+
+    #menu article ul li p{
+        font-size: 0.75em;
+        line-height: 1.3;
+    }
+
+    .btm-adicionar{
+        font-size: 0.7em;
+        padding: 3px;
+        width: 70px;
+    }
+
+    /* === PIZZAS MOBILE === */
+    #pizzas ul li{
+        grid-template-columns: 1fr 70px 70px 75px;
+        gap: 3px 4px;
+    }
+
+    #pizzas .preco-media,
+    #pizzas .preco-familiar{
+        font-size: 0.75em;
+    }
+
+    #pizzas .cabecalho_pizzas{
+        grid-template-columns: 1fr 70px 70px 75px;
+        font-size: 0.75em;
+        font-weight: bold;
+    }
+
+    /* === CARRINHO === */
+    #carrinho-flutuante{
+        right: 10px;
+        bottom: 10px;
+    }
+
+    #btn-carrinho{
+        right: 10px;
+        bottom: 10px;
+        font-size: 0.85em;
+        padding: 8px;
+    }
+
+    #carrinho-painel{
+        right: 10px;
+        bottom: 70px;
+        width: calc(100vw - 20px);
+        max-width: 320px;
+    }
+
+    /* === CONTACTOS === */
+    #contactos h2{
+        font-size: 1.4em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #contactos{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div#horário{
+        width: 100%;
+        max-width: 315px;
+    }
+
+    div#telefone{
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        padding: 15px;
+    }
+
+    div#localização{
+        width: 100%;
+        text-align: center;
+    }
+
+    #localização h3{
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    #localização address{
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 280px;
+    }
+
+    div#mapa{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    iframe{
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* === FOOTER === */
+    footer {
+        padding: 20px 15px;
+    }
+
+      div#dominio {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* === MEDIA QUERIES_ TABLET: === */
+    @media (min-width: 769px) and (max-width: 1024px){
+
+        section#serviços{
+            grid-template-columns: repeat(2 , 1fr);
+        }
+
+        #menu article:not(#pizzas) ul li{
+            grid-template-columns: 1fr 90px 95px;
+        }
+
+        #pizzas ul li{
+            grid-template-columns: 1fr 80px 80px 95px;
+        }
+    }
+
 }
 
 

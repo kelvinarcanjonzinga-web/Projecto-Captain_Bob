@@ -180,6 +180,30 @@ document.getElementById('btn-whatsapp').addEventListener('click', function() {
     window.open('https://wa.me/244943567154?text=' + encodeURIComponent(mensagem))
 })
 
+//Scrool Reveal;
+
+ScrollReveal().reveal('#serviços article' , {
+    delay:200,
+    distance:'30px',
+    origin:'bottom',
+    interval:150
+})
+
+ScrollReveal().reveal('#menu article' , {
+    delay:100,
+    distance:'30px',
+    origin:'left'
+})
+
+ScrollReveal().reveal('#contactos div' , {
+    delay:200,
+    distance:'40px',
+    origin:'bottom',
+    interval:100
+})
+
+
+//Implementação de emojis externos:twemoji;
 twemoji.parse(document.body)
 
 
