@@ -191,23 +191,26 @@ document.getElementById('btn-whatsapp').addEventListener('click', function() {
 //Scrool Reveal;
 
 ScrollReveal().reveal('#serviços article' , {
-    delay:200,
-    distance:'30px',
+    delay:150,
+    distance:'40px',
     origin:'bottom',
-    interval:150
-})
-
-ScrollReveal().reveal('#menu article' , {
-    delay:100,
-    distance:'30px',
-    origin:'left'
+    interval:120,
+    reset: false
 })
 
 ScrollReveal().reveal('#contactos div' , {
-    delay:200,
-    distance:'40px',
+    delay:100,
+    distance:'30px',
     origin:'bottom',
-    interval:100
+    interval:100,
+    reset: false
+})
+
+ScrollReveal.reveal('#contactos h2' , {
+    delay: 50,
+    distance: '20px',
+    origin: 'top',
+    reset: false
 })
 
 //Detecta se o dispositivo é Mobile;
