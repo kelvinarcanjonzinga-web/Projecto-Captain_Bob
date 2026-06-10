@@ -1807,6 +1807,30 @@ img.emoji{
         align-items: center;
     }
 
+    /* BOTÃO ELIMINAR NO CARRINHO */
+
+    .carrinho-item{
+        font-size: 0.82em;
+        padding: 4px 0;
+        gap: 5px;
+        overflow: hidden;
+    }
+
+    .carrinho-item button{
+        font-size: 0.9em;
+        padding: 2px 5px;
+        margin-left: 5px;
+        flex-shrink: 0;
+    }
+
+    .carrinho-item span,
+    .carrinho-item-texto{
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     /* === MEDIA QUERIES_ TABLET: === */
     @media (min-width: 769px) and (max-width: 1024px){
 
