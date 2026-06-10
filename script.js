@@ -198,20 +198,6 @@ ScrollReveal().reveal('#serviços article' , {
     reset: false
 })
 
-ScrollReveal().reveal('#contactos div' , {
-    delay:100,
-    distance:'30px',
-    origin:'bottom',
-    interval:100,
-    reset: false
-})
-
-ScrollReveal.reveal('#contactos h2' , {
-    delay: 50,
-    distance: '20px',
-    origin: 'top',
-    reset: false
-})
 
 //Detecta se o dispositivo é Mobile;
 
