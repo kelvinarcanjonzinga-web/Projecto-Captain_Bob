@@ -1860,22 +1860,17 @@ img.emoji{
 
 
 /* No style.css — animação suave sem ScrollReveal */
-#menu article{
-    animation: fadeIn 0.5s ease forwards;
+#serviços article,
+#contactos > div {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+.visivel-anim {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
-
 
 
 

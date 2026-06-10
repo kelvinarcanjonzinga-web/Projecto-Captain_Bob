@@ -188,6 +188,21 @@ document.getElementById('btn-whatsapp').addEventListener('click', function() {
     window.open('https://wa.me/244943567154?text=' + encodeURIComponent(mensagem))
 })
 
+//Animações;
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visivel-anim')
+            observer.unobserve(entry.target)  // só anima uma vez
+        }
+    })
+}, { threshold: 0.1 })
+
+// Observa serviços e contactos
+document.querySelectorAll('#serviços article, #contactos > div').forEach(el => {
+    observer.observe(el)
+})
+
 //Implementação de emojis externos:twemoji;
 twemoji.parse(document.body)
 
