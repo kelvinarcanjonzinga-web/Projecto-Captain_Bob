@@ -1859,5 +1859,23 @@ img.emoji{
     }
 
 
+/* No style.css — animação suave sem ScrollReveal */
+#menu article{
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 
