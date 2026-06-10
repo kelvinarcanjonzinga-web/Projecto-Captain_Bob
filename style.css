@@ -1701,7 +1701,7 @@ img.emoji{
         line-height: 1.3;
     }
 
-    .btm-adicionar{
+    .btn-adicionar{
         font-size: 0.7em;
         padding: 3px;
         width: 70px;
@@ -1817,8 +1817,8 @@ img.emoji{
     }
 
     .carrinho-item button{
-        font-size: 0.9em;
-        padding: 2px 5px;
+        font-size: 1em;
+        padding: 2px 5px 2px 2px;
         margin-left: 5px;
         flex-shrink: 0;
     }
