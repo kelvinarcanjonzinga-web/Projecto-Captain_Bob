@@ -188,25 +188,6 @@ document.getElementById('btn-whatsapp').addEventListener('click', function() {
     window.open('https://wa.me/244943567154?text=' + encodeURIComponent(mensagem))
 })
 
-
-//Detecta se o dispositivo é Mobile;
-
-const isMobile = window.innerWidth <= 768
-
-ScrollReveal().reveal('#serviços article' , {
-    delay: isMobile ? 50 : 200,
-    distance: isMobile ? '20px' : '50px',
-    origin: 'bottom',
-    interval: isMobile ? 80 : 150
-})
-
-ScrollReveal.reveal('#menu article' ,  {
-    delay: isMobile ? 30 : 100,
-    distance: isMobile ? '15px' : '30px',
-    origin: 'left'
-})
-
-
 //Implementação de emojis externos:twemoji;
 twemoji.parse(document.body)
 
