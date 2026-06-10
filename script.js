@@ -188,16 +188,6 @@ document.getElementById('btn-whatsapp').addEventListener('click', function() {
     window.open('https://wa.me/244943567154?text=' + encodeURIComponent(mensagem))
 })
 
-//Scrool Reveal;
-
-ScrollReveal().reveal('#serviços article' , {
-    delay:150,
-    distance:'40px',
-    origin:'bottom',
-    interval:120,
-    reset: false
-})
-
 
 //Detecta se o dispositivo é Mobile;
 
