@@ -1857,4 +1857,13 @@ img.emoji{
 }
 
 
+#matabichos, #entradas, #saladas, #sandwich,
+#burgers, #pizzas, #spaguetti, #pratos_libanesa,
+#pratos_angolanos, #crispy, #pratos, #gelados,
+#refrigerantes, #bebidas_quentes, #batidos,
+#sumos_naturais {
+    will-change: transform;  /* avisa o browser antecipadamente */
+    background-attachment: scroll;
+}
+
 
