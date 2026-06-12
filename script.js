@@ -26,7 +26,7 @@ for(let btn of botoes){
 
         // Scroll suave até ao menu após filtrar;
         setTimeout(function(){
-            Document.getElementById('menu').scrollIntoView({
+            document.getElementById('menu').scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             })
@@ -57,48 +57,117 @@ document.getElementById('btn-reset').addEventListener('click' , function(){
 
 let carrinho = [];
 
+// Variável para guardar o botão que foi clicado
+let botaoPizzaActual = null
+
+// Modifica o addEventListener dos botões adicionar
 botoes_adicionar.forEach(botao => {
-    botao.addEventListener('click' , function(){
+    botao.addEventListener('click', function() {
         const li = botao.parentElement
-        const nome = li.querySelector('.nome').textContent
+        const nome = li.querySelector('.nome').textContent.trim()
 
-        const spanPreco = li.querySelector('.preço') || 
+        // Verifica se é uma pizza com dois preços
+        const spanMedia = li.querySelector('.preco-media')
+        const spanFamiliar = li.querySelector('.preco-familiar')
+
+        if (spanMedia && spanFamiliar) {
+            // É uma pizza — mostra o popup
+            const precoMedia = spanMedia.textContent.trim()
+            const precoFamiliar = spanFamiliar.textContent.trim()
+
+            document.getElementById('popup-nome').textContent = nome
+            document.getElementById('popup-preco-media').textContent = precoMedia
+            document.getElementById('popup-preco-familiar').textContent = precoFamiliar
+
+            botaoPizzaActual = botao  // guarda o botão para usar depois
+            document.getElementById('popup-pizza').classList.remove('escondido')
+            return  // para aqui — não adiciona ao carrinho ainda
+        }
+
+        // Não é pizza — processo normal
+        adicionarAoCarrinho(botao, li, nome)
+    })
+})
+
+// Função reutilizável para adicionar ao carrinho
+function adicionarAoCarrinho(botao, li, nome, precoOverride = null) {
+    let preco
+
+    if (precoOverride !== null) {
+        preco = precoOverride
+    } else {
+        const spanPreco = li.querySelector('.preço') ||
                           li.querySelector('.preco-media')
-
         if (!spanPreco) return
-
-        const preco = parseInt(
+        preco = parseInt(
             spanPreco.textContent
-            .replace('Kz', '').replace(/\./g, '')
+            .replace('Kz', '').replace(/\./g, '').trim()
         )
+    }
 
-        if (isNaN(preco)) {
-            alert('Este item ainda não tem preço definido!')
-            return
-        }
+    if (isNaN(preco)) {
+        alert('Este item ainda não tem preço definido!')
+        return
+    }
 
-        //Criar um Objecto com os daddos do prato;
-        const itens = {
-            nome: nome,
-            preco: preco
-        }
+    const itens = { nome: nome, preco: preco }
+    carrinho.push(itens)
+    actualizarCarrinho()
 
-        //Adicionar os itens selecionados ao carrinho;
-        carrinho.push(itens)
-        actualizarCarrinho()     
+    // Feedback visual
+    botao.textContent = '✔️ Adicionado'
+    botao.classList.add('btn-adicionado')
+    botao.disabled = true
 
-        //Feedback Visual dos Botões;
-        botao.textContent = '✔️'
-        botao.classList.add('btn-adicionado')
-        botao.disable = true //Impede clicar duas vezes antes de 2 segundos;
+    setTimeout(function() {
+        botao.textContent = '+ Adicionar'
+        botao.classList.remove('btn-adicionado')
+        botao.disabled = false
+    }, 2000)
+}
 
-        //Volta ao Estado Original após 2 segundos;
-        setTimeout(function(){
-            botao.textContent = '+ Adicionar'
-            botao.classList.remove('btn-adicionado')
-            botao.disable = false
-        }, 2000)
-    }) 
+// Botão Média no popup
+document.getElementById('btn-media').addEventListener('click', function() {
+    if (!botaoPizzaActual) return
+    const li = botaoPizzaActual.parentElement
+    const nome = li.querySelector('.nome').textContent.trim()
+    const precoTexto = li.querySelector('.preco-media').textContent
+    const preco = parseInt(
+        precoTexto.replace('Kz', '').replace(/\./g, '').trim()
+    )
+
+    adicionarAoCarrinho(botaoPizzaActual, li, nome + ' (Média)', preco)
+    document.getElementById('popup-pizza').classList.add('escondido')
+    botaoPizzaActual = null
+})
+
+// Botão Familiar no popup
+document.getElementById('btn-familiar').addEventListener('click', function() {
+    if (!botaoPizzaActual) return
+    const li = botaoPizzaActual.parentElement
+    const nome = li.querySelector('.nome').textContent.trim()
+    const precoTexto = li.querySelector('.preco-familiar').textContent
+    const preco = parseInt(
+        precoTexto.replace('Kz', '').replace(/\./g, '').trim()
+    )
+
+    adicionarAoCarrinho(botaoPizzaActual, li, nome + ' (Familiar)', preco)
+    document.getElementById('popup-pizza').classList.add('escondido')
+    botaoPizzaActual = null
+})
+
+// Botão Cancelar
+document.getElementById('btn-cancelar-pizza').addEventListener('click', function() {
+    document.getElementById('popup-pizza').classList.add('escondido')
+    botaoPizzaActual = null
+})
+
+// Fecha popup ao clicar fora
+document.getElementById('popup-pizza').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.add('escondido')
+        botaoPizzaActual = null
+    }
 })
 
 function actualizarCarrinho(){

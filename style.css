@@ -1866,4 +1866,94 @@ img.emoji{
     background-attachment: scroll;
 }
 
+/* CSS do Popup das Pizzas */
+
+#popup-pizza.escondido{
+    display: none;
+}
+
+#popup-pizza {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-conteudo {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#popup-conteudo h3 {
+    color: var(--cor-hero);
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 8px;
+}
+
+#popup-conteudo p {
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+#btn-media, #btn-familiar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s ease;
+}
+
+#btn-media {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+#btn-media:hover {
+    background-color: #0077aa;
+    transform: translateY(-2px);
+}
+
+#btn-familiar {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+#btn-familiar:hover {
+    background-color: #aa0000;
+    transform: translateY(-2px);
+}
+
+#btn-cancelar-pizza {
+    background: none;
+    border: 1px solid var(--cor-texto);
+    color: var(--cor-texto);
+    padding: 6px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+#btn-cancelar-pizza:hover {
+    background-color: #f0f0f0;
+}
+
 
